@@ -29,6 +29,12 @@ class PaintController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let saveButton = UIBarButtonItem(title: "Save",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(onSave))
+        
+        navigationItem.rightBarButtonItem = saveButton
         viewCanvas.backgroundColor = .white
         
         NSLayoutConstraint.activate([
@@ -37,6 +43,13 @@ class PaintController: BaseViewController {
             btnUndo.heightAnchor.constraint(equalToConstant: 45),
             btnUndo.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
+    }
+    
+    @objc func onSave(_ sender: UIBarButtonItem) {
+        //filesManager
+        let image = viewCanvas.image
+        filesManager.addPicture(image: image!)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @objc func onUndo() {

@@ -11,8 +11,9 @@ import UIKit
 class CanvasView: UIView {
 
     private var points = [CGPoint]()
-    
     private var lines = [[CGPoint]]()
+    var image: UIImage?
+    private var filesManager = FilesManager()
     
     var linesMock = [
         [CGPoint(x: 0, y: 0), CGPoint(x: 1, y: 1), CGPoint(x: 2, y: 2)], // პირველი ხაზი
@@ -42,6 +43,10 @@ class CanvasView: UIView {
         context.setStrokeColor(UIColor.black.cgColor)
         context.setLineWidth(2)
         context.strokePath()
+
+        image = UIImage(cgImage: context.makeImage()!)
+
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

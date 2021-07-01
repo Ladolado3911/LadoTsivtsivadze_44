@@ -69,4 +69,11 @@ class FilesManager {
         
         try? text.write(to: fileUrl, atomically: true, encoding: .utf8)
     }
+    
+    func addPicture(image img1: UIImage) {
+        if let data = img1.pngData() {
+            let filename = appUrl!.appendingPathComponent("copy.png")
+            try? data.write(to: filename)
+        }
+    }
 }
