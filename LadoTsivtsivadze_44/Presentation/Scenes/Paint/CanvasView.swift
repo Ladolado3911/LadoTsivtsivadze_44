@@ -14,6 +14,8 @@ class CanvasView: UIView {
     private var lines = [[CGPoint]]()
     var image: UIImage?
     private var filesManager = FilesManager()
+    var color: UIColor?
+    var thickness: CGFloat?
     
     var linesMock = [
         [CGPoint(x: 0, y: 0), CGPoint(x: 1, y: 1), CGPoint(x: 2, y: 2)], // პირველი ხაზი
@@ -38,6 +40,17 @@ class CanvasView: UIView {
                 }
             }
             
+        }
+        
+        if let color = color {
+            if let thickness = thickness {
+                context.setStrokeColor(color.cgColor)
+                context.setLineWidth(thickness)
+                context.strokePath()
+
+                image = UIImage(cgImage: context.makeImage()!)
+                return
+            }
         }
         
         context.setStrokeColor(UIColor.black.cgColor)

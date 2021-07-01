@@ -23,7 +23,6 @@
 		2442A396268DB3A30099D945 /* PaintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A395268DB3A30099D945 /* PaintController.swift */; };
 		2442A399268DB4400099D945 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A398268DB4400099D945 /* BaseViewController.swift */; };
 		2442A39D268DB5090099D945 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A39B268DB5090099D945 /* ImageCell.swift */; };
-		2442A39E268DB5090099D945 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442A39C268DB5090099D945 /* ImageCell.xib */; };
 		2442A3A0268E06D70099D945 /* GalleryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A39F268E06D70099D945 /* GalleryController.storyboard */; };
 		2442A3A2268E09AB0099D945 /* PaintController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A3A1268E09AB0099D945 /* PaintController.storyboard */; };
 		2442A3A4268E0C370099D945 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A3A3268E0C370099D945 /* CanvasView.swift */; };
@@ -48,7 +47,6 @@
 		2442A395268DB3A30099D945 /* PaintController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintController.swift; sourceTree = "<group>"; };
 		2442A398268DB4400099D945 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2442A39B268DB5090099D945 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		2442A39C268DB5090099D945 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		2442A39F268E06D70099D945 /* GalleryController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryController.storyboard; sourceTree = "<group>"; };
 		2442A3A1268E09AB0099D945 /* PaintController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaintController.storyboard; sourceTree = "<group>"; };
 		2442A3A3268E0C370099D945 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				2442A39B268DB5090099D945 /* ImageCell.swift */,
-				2442A39C268DB5090099D945 /* ImageCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -248,7 +245,6 @@
 			files = (
 				2442A3A0268E06D70099D945 /* GalleryController.storyboard in Resources */,
 				2442A37A268DAD160099D945 /* LaunchScreen.storyboard in Resources */,
-				2442A39E268DB5090099D945 /* ImageCell.xib in Resources */,
 				2442A3A2268E09AB0099D945 /* PaintController.storyboard in Resources */,
 				2442A377268DAD160099D945 /* Assets.xcassets in Resources */,
 				2442A372268DAD150099D945 /* Main.storyboard in Resources */,
