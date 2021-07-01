@@ -45,6 +45,12 @@ class PaintController: BaseViewController {
         ])
     }
     
+    @IBAction func onPickColor(_ sender: UIButton) {
+        let colorPickerVc = UIColorPickerViewController()
+        colorPickerVc.delegate = self
+        present(colorPickerVc, animated: true)
+    }
+    
     @objc func onSave(_ sender: UIBarButtonItem) {
         //filesManager
         let image = viewCanvas.image
@@ -74,4 +80,8 @@ class PaintController: BaseViewController {
     @objc func onUndo() {
         viewCanvas.undo()
     }
+}
+
+extension PaintController: UIColorPickerViewControllerDelegate {
+    
 }
