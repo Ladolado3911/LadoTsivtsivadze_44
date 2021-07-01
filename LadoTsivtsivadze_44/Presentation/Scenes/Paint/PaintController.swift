@@ -48,8 +48,27 @@ class PaintController: BaseViewController {
     @objc func onSave(_ sender: UIBarButtonItem) {
         //filesManager
         let image = viewCanvas.image
-        filesManager.addPicture(image: image!)
-        self.navigationController?.popToRootViewController(animated: true)
+        
+        let alertController = UIAlertController(title: "Name",
+                                                message: "Enter name of pciture",
+                                                preferredStyle: .alert)
+        alertController.addTextField()
+        
+        let saveAction = UIAlertAction(title: "Save",
+                                       style: .cancel) { [weak self] action in
+            guard let self = self else { return }
+            let name = alertController.textFields![0].text
+            self.filesManager.addPicture(image: image!, nameofFile: name!)
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .destructive,
+                                         handler: nil)
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
     }
     
     @objc func onUndo() {

@@ -70,10 +70,30 @@ class FilesManager {
         try? text.write(to: fileUrl, atomically: true, encoding: .utf8)
     }
     
-    func addPicture(image img1: UIImage) {
+    func addPicture(image img1: UIImage, nameofFile name: String) {
         if let data = img1.pngData() {
-            let filename = appUrl!.appendingPathComponent("copy.png")
+            let filename = appUrl!.appendingPathComponent("\(name).png")
             try? data.write(to: filename)
         }
+    }
+    
+    func readPictures() -> [String]? {
+        return try? fileManager.contentsOfDirectory(atPath: appUrl!.absoluteString)
+    }
+    
+    func loadImage(at name: String) -> UIImage? {
+        let documentPath = appUrl!
+        let imagePath = documentPath.appendingPathComponent("\(name).png")
+        guard fileExists(at: imagePath.absoluteString) else {
+            return nil
+        }
+        guard let image = UIImage(contentsOfFile: imagePath.absoluteString) else {
+            return nil
+        }
+        return image
+    }
+
+    func fileExists(at path: String) -> Bool {
+        return FileManager.default.fileExists(atPath: path)
     }
 }

@@ -10,6 +10,12 @@ import UIKit
 class GalleryController: BaseViewController {
     
     @IBOutlet weak var collectView: UICollectionView!
+    var pictures: [String]? {
+        let pictures = filesManager.readPictures()
+        guard let pictures = pictures else { return nil }
+        let result = pictures.filter { $0.suffix(3) == "png" }
+        return result
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
