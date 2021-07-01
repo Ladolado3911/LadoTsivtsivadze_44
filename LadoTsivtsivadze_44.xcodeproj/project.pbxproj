@@ -19,6 +19,7 @@
 		2442A38D268DAF9E0099D945 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */; };
 		2442A38F268DB0AC0099D945 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */; };
 		2442A391268DB0CC0099D945 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A390268DB0CC0099D945 /* Storyboarded.swift */; };
+		2442A393268DB1060099D945 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A392268DB1060099D945 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		2442A390268DB0CC0099D945 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		2442A392268DB1060099D945 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */,
 				2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */,
 				2442A390268DB0CC0099D945 /* Storyboarded.swift */,
+				2442A392268DB1060099D945 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				2442A38D268DAF9E0099D945 /* CoordinatorProtocol.swift in Sources */,
 				2442A389268DAD950099D945 /* ViewController2.swift in Sources */,
+				2442A393268DB1060099D945 /* AppCoordinator.swift in Sources */,
 				2442A36F268DAD150099D945 /* ViewController.swift in Sources */,
 				2442A38F268DB0AC0099D945 /* CoordinatorDelegate.swift in Sources */,
 				2442A36B268DAD150099D945 /* AppDelegate.swift in Sources */,
