@@ -24,6 +24,7 @@
 		2442A399268DB4400099D945 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A398268DB4400099D945 /* BaseViewController.swift */; };
 		2442A39D268DB5090099D945 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A39B268DB5090099D945 /* ImageCell.swift */; };
 		2442A39E268DB5090099D945 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442A39C268DB5090099D945 /* ImageCell.xib */; };
+		2442A3A0268E06D70099D945 /* GalleryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A39F268E06D70099D945 /* GalleryController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2442A398268DB4400099D945 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2442A39B268DB5090099D945 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		2442A39C268DB5090099D945 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		2442A39F268E06D70099D945 /* GalleryController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				2442A39A268DB4EA0099D945 /* Cells */,
 				2442A388268DAD950099D945 /* GalleryController.swift */,
+				2442A39F268E06D70099D945 /* GalleryController.storyboard */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2442A3A0268E06D70099D945 /* GalleryController.storyboard in Resources */,
 				2442A37A268DAD160099D945 /* LaunchScreen.storyboard in Resources */,
 				2442A39E268DB5090099D945 /* ImageCell.xib in Resources */,
 				2442A377268DAD160099D945 /* Assets.xcassets in Resources */,

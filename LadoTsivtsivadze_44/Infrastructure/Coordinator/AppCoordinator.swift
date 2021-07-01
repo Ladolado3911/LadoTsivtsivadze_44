@@ -24,6 +24,11 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
+        let vc = GalleryController.instantiateFromStoryboard()
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
         
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 }
