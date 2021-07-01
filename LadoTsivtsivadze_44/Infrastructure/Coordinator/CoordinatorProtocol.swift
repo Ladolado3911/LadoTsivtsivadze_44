@@ -15,7 +15,7 @@ protocol CoordinatorProtocol: AnyObject {
     init(_ window: UIWindow?, navigationController: UINavigationController?)
     
     func start()
-//    func proceedToProductDetails(with product: Product?)
+    func proceedToDraw()
 //    func proceedToBuy(with product: Product?)
 //    func showSuccessAlert()
 }

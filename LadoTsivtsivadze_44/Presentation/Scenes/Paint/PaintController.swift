@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaintController: UIViewController {
+class PaintController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

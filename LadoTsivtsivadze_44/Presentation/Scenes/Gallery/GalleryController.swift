@@ -14,6 +14,12 @@ class GalleryController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
+        let button = UIBarButtonItem(title: "Add",
+                                     style: .done,
+                                     target: self,
+                                     action: #selector(add))
+        
+        navigationItem.rightBarButtonItem = button
 
     }
     
@@ -23,6 +29,10 @@ class GalleryController: BaseViewController {
         
         let nib = UINib(nibName: "ImageCell", bundle: nil)
         collectView.register(nib, forCellWithReuseIdentifier: "ImageCell")
+    }
+    
+    @objc func add(_ sender: UIBarButtonItem) {
+        coordinator?.proceedToDraw()
     }
 }
 

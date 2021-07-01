@@ -10,7 +10,7 @@ import UIKit
 
 
 final class AppCoordinator: CoordinatorProtocol {
-    
+
     var filesManager: FilesManager
     
     private var window: UIWindow?
@@ -30,5 +30,11 @@ final class AppCoordinator: CoordinatorProtocol {
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+    
+    func proceedToDraw() {
+        let vc = PaintController.instantiateFromStoryboard()
+        vc.coordinator = self
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
