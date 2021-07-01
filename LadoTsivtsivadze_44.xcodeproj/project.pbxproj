@@ -26,6 +26,7 @@
 		2442A39E268DB5090099D945 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2442A39C268DB5090099D945 /* ImageCell.xib */; };
 		2442A3A0268E06D70099D945 /* GalleryController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A39F268E06D70099D945 /* GalleryController.storyboard */; };
 		2442A3A2268E09AB0099D945 /* PaintController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A3A1268E09AB0099D945 /* PaintController.storyboard */; };
+		2442A3A4268E0C370099D945 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A3A3268E0C370099D945 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		2442A39C268DB5090099D945 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		2442A39F268E06D70099D945 /* GalleryController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GalleryController.storyboard; sourceTree = "<group>"; };
 		2442A3A1268E09AB0099D945 /* PaintController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaintController.storyboard; sourceTree = "<group>"; };
+		2442A3A3268E0C370099D945 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				2442A395268DB3A30099D945 /* PaintController.swift */,
 				2442A3A1268E09AB0099D945 /* PaintController.storyboard */,
+				2442A3A3268E0C370099D945 /* CanvasView.swift */,
 			);
 			path = Paint;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				2442A399268DB4400099D945 /* BaseViewController.swift in Sources */,
 				2442A36B268DAD150099D945 /* AppDelegate.swift in Sources */,
 				2442A391268DB0CC0099D945 /* Storyboarded.swift in Sources */,
+				2442A3A4268E0C370099D945 /* CanvasView.swift in Sources */,
 				2442A396268DB3A30099D945 /* PaintController.swift in Sources */,
 				2442A375268DAD150099D945 /* LadoTsivtsivadze_44.xcdatamodeld in Sources */,
 				2442A36D268DAD150099D945 /* SceneDelegate.swift in Sources */,
