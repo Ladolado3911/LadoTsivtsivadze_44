@@ -14,12 +14,14 @@
 		2442A375268DAD150099D945 /* LadoTsivtsivadze_44.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2442A373268DAD150099D945 /* LadoTsivtsivadze_44.xcdatamodeld */; };
 		2442A377268DAD160099D945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2442A376268DAD160099D945 /* Assets.xcassets */; };
 		2442A37A268DAD160099D945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2442A378268DAD160099D945 /* LaunchScreen.storyboard */; };
-		2442A389268DAD950099D945 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A388268DAD950099D945 /* ViewController2.swift */; };
+		2442A389268DAD950099D945 /* GalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A388268DAD950099D945 /* GalleryController.swift */; };
 		2442A38B268DAE030099D945 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38A268DAE030099D945 /* FilesManager.swift */; };
 		2442A38D268DAF9E0099D945 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */; };
 		2442A38F268DB0AC0099D945 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */; };
 		2442A391268DB0CC0099D945 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A390268DB0CC0099D945 /* Storyboarded.swift */; };
 		2442A393268DB1060099D945 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A392268DB1060099D945 /* AppCoordinator.swift */; };
+		2442A396268DB3A30099D945 /* PaintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A395268DB3A30099D945 /* PaintController.swift */; };
+		2442A399268DB4400099D945 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A398268DB4400099D945 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +34,14 @@
 		2442A376268DAD160099D945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2442A379268DAD160099D945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2442A37B268DAD160099D945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2442A388268DAD950099D945 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		2442A388268DAD950099D945 /* GalleryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryController.swift; sourceTree = "<group>"; };
 		2442A38A268DAE030099D945 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 		2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		2442A390268DB0CC0099D945 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		2442A392268DB1060099D945 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2442A395268DB3A30099D945 /* PaintController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintController.swift; sourceTree = "<group>"; };
+		2442A398268DB4400099D945 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,17 +135,35 @@
 		2442A386268DAD570099D945 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2442A387268DAD5D0099D945 /* New Group */,
+				2442A397268DB42F0099D945 /* Base */,
+				2442A394268DB36B0099D945 /* Paint */,
+				2442A387268DAD5D0099D945 /* Gallery */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		2442A387268DAD5D0099D945 /* New Group */ = {
+		2442A387268DAD5D0099D945 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				2442A388268DAD950099D945 /* ViewController2.swift */,
+				2442A388268DAD950099D945 /* GalleryController.swift */,
 			);
-			path = "New Group";
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		2442A394268DB36B0099D945 /* Paint */ = {
+			isa = PBXGroup;
+			children = (
+				2442A395268DB3A30099D945 /* PaintController.swift */,
+			);
+			path = Paint;
+			sourceTree = "<group>";
+		};
+		2442A397268DB42F0099D945 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2442A398268DB4400099D945 /* BaseViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,12 +237,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2442A38D268DAF9E0099D945 /* CoordinatorProtocol.swift in Sources */,
-				2442A389268DAD950099D945 /* ViewController2.swift in Sources */,
+				2442A389268DAD950099D945 /* GalleryController.swift in Sources */,
 				2442A393268DB1060099D945 /* AppCoordinator.swift in Sources */,
 				2442A36F268DAD150099D945 /* ViewController.swift in Sources */,
 				2442A38F268DB0AC0099D945 /* CoordinatorDelegate.swift in Sources */,
+				2442A399268DB4400099D945 /* BaseViewController.swift in Sources */,
 				2442A36B268DAD150099D945 /* AppDelegate.swift in Sources */,
 				2442A391268DB0CC0099D945 /* Storyboarded.swift in Sources */,
+				2442A396268DB3A30099D945 /* PaintController.swift in Sources */,
 				2442A375268DAD150099D945 /* LadoTsivtsivadze_44.xcdatamodeld in Sources */,
 				2442A36D268DAD150099D945 /* SceneDelegate.swift in Sources */,
 				2442A38B268DAE030099D945 /* FilesManager.swift in Sources */,
