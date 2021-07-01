@@ -38,8 +38,9 @@ class GalleryController: BaseViewController {
         collectView.dataSource = self
         collectView.delegate = self
         
-        let nib = UINib(nibName: "ImageCell", bundle: nil)
-        collectView.register(nib, forCellWithReuseIdentifier: "ImageCell")
+//        let nib = UINib(nibName: "ImageCell", bundle: nil)
+//        collectView.register(nib, forCellWithReuseIdentifier: "ImageCell")
+        collectView.register(ImageCell.self, forCellWithReuseIdentifier: "ImageCell")
     }
     
     @objc func add(_ sender: UIBarButtonItem) {
