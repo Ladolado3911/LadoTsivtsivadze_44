@@ -8,14 +8,23 @@
 import UIKit
 
 class GalleryController: BaseViewController {
+    
+    
+    @IBOutlet weak var collectView: UICollectionView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configCollectionView()
 
     }
     
     func configCollectionView() {
+        collectView.dataSource = self
+        collectView.delegate = self
         
+        let nib = UINib(nibName: "ImageCell", bundle: nil)
+        collectView.register(nib, forCellWithReuseIdentifier: "ImageCell")
     }
 }
 
