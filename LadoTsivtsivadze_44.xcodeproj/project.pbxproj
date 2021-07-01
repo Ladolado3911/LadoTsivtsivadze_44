@@ -17,6 +17,8 @@
 		2442A389268DAD950099D945 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A388268DAD950099D945 /* ViewController2.swift */; };
 		2442A38B268DAE030099D945 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38A268DAE030099D945 /* FilesManager.swift */; };
 		2442A38D268DAF9E0099D945 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */; };
+		2442A38F268DB0AC0099D945 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */; };
+		2442A391268DB0CC0099D945 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2442A390268DB0CC0099D945 /* Storyboarded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2442A388268DAD950099D945 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		2442A38A268DAE030099D945 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 		2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		2442A390268DB0CC0099D945 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				2442A38C268DAF9E0099D945 /* CoordinatorProtocol.swift */,
+				2442A38E268DB0AC0099D945 /* CoordinatorDelegate.swift */,
+				2442A390268DB0CC0099D945 /* Storyboarded.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -208,7 +214,9 @@
 				2442A38D268DAF9E0099D945 /* CoordinatorProtocol.swift in Sources */,
 				2442A389268DAD950099D945 /* ViewController2.swift in Sources */,
 				2442A36F268DAD150099D945 /* ViewController.swift in Sources */,
+				2442A38F268DB0AC0099D945 /* CoordinatorDelegate.swift in Sources */,
 				2442A36B268DAD150099D945 /* AppDelegate.swift in Sources */,
+				2442A391268DB0CC0099D945 /* Storyboarded.swift in Sources */,
 				2442A375268DAD150099D945 /* LadoTsivtsivadze_44.xcdatamodeld in Sources */,
 				2442A36D268DAD150099D945 /* SceneDelegate.swift in Sources */,
 				2442A38B268DAE030099D945 /* FilesManager.swift in Sources */,
