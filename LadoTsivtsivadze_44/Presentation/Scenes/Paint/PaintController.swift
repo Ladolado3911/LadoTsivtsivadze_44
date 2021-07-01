@@ -9,6 +9,16 @@ import UIKit
 
 class PaintController: BaseViewController {
     lazy var viewCanvas = CanvasView(frame: view.bounds)
+
+    var btnColor: UIButton = {
+       let b = UIButton()
+        b.translatesAutoresizingMaskIntoConstraints = false
+        b.setTitle("Set Color", for: .normal)
+        b.addTarget(self, action: #selector(onPickColor), for: .touchUpInside)
+        b.backgroundColor = .red
+        b.contentHorizontalAlignment = .center
+        return b
+    }()
     
     var btnUndo: UIButton = {
         let b = UIButton()
@@ -24,6 +34,7 @@ class PaintController: BaseViewController {
         
         view = viewCanvas
         view.addSubview(btnUndo)
+        view.addSubview(btnColor)
     }
 
     override func viewDidLoad() {
@@ -41,11 +52,21 @@ class PaintController: BaseViewController {
             btnUndo.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             btnUndo.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             btnUndo.heightAnchor.constraint(equalToConstant: 45),
-            btnUndo.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            btnUndo.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            btnColor.topAnchor.constraint(equalTo: view.topAnchor, constant: 64),
+            btnColor.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            btnColor.widthAnchor.constraint(equalToConstant: 120)
+            
         ])
     }
     
-    @IBAction func onPickColor(_ sender: UIButton) {
+    func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+        let color = viewController.selectedColor
+        self.viewCanvas.color = color
+    }
+ 
+    @objc func onPickColor(_ sender: UIButton) {
         let colorPickerVc = UIColorPickerViewController()
         colorPickerVc.delegate = self
         present(colorPickerVc, animated: true)
