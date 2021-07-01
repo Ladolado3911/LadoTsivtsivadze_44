@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,30 +16,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="389" height="247"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R05-rS-tWo">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-fj-8A2">
                         <rect key="frame" x="0.0" y="0.0" width="389" height="247"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-fj-8A2">
-                                <rect key="frame" x="0.0" y="0.0" width="389" height="247"/>
-                                <color key="backgroundColor" red="0.23137254900000001" green="0.63137254899999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="z1k-fj-8A2" secondAttribute="trailing" id="2Br-SZ-mV4"/>
-                            <constraint firstAttribute="bottom" secondItem="z1k-fj-8A2" secondAttribute="bottom" id="Pau-2y-PeJ"/>
-                            <constraint firstItem="z1k-fj-8A2" firstAttribute="top" secondItem="R05-rS-tWo" secondAttribute="top" id="gK7-QE-9ut"/>
-                            <constraint firstItem="z1k-fj-8A2" firstAttribute="leading" secondItem="R05-rS-tWo" secondAttribute="leading" id="gPs-Uo-2kn"/>
-                        </constraints>
-                    </view>
+                        <color key="backgroundColor" red="0.23137254900000001" green="0.63137254899999995" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="R05-rS-tWo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Lpn-hV-y5K"/>
-                <constraint firstItem="R05-rS-tWo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="q4a-rb-L7a"/>
-                <constraint firstAttribute="trailing" secondItem="R05-rS-tWo" secondAttribute="trailing" id="xSf-BF-MJr"/>
-                <constraint firstAttribute="bottom" secondItem="R05-rS-tWo" secondAttribute="bottom" id="ygb-KF-DPl"/>
+                <constraint firstAttribute="bottom" secondItem="z1k-fj-8A2" secondAttribute="bottom" id="3wa-A3-4qW"/>
+                <constraint firstItem="z1k-fj-8A2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FEF-9c-lbf"/>
+                <constraint firstAttribute="trailing" secondItem="z1k-fj-8A2" secondAttribute="trailing" id="gvd-H3-hK4"/>
+                <constraint firstItem="z1k-fj-8A2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zuM-Ky-KMp"/>
             </constraints>
             <size key="customSize" width="389" height="247"/>
             <connections>
@@ -49,9 +36,4 @@
             <point key="canvasLocation" x="266" y="133"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -78,19 +78,24 @@ class FilesManager {
     }
     
     func readPictures() -> [String]? {
-        return try? fileManager.contentsOfDirectory(atPath: appUrl!.absoluteString)
+        guard let urls = try? fileManager.contentsOfDirectory(at: appUrl!,
+                                            includingPropertiesForKeys: nil,
+                                            options: .skipsHiddenFiles) else { return nil }
+        
+        let result = urls.map { $0.lastPathComponent }
+        return result
     }
     
     func loadImage(at name: String) -> UIImage? {
-        let documentPath = appUrl!
-        let imagePath = documentPath.appendingPathComponent("\(name).png")
-        guard fileExists(at: imagePath.absoluteString) else {
-            return nil
-        }
-        guard let image = UIImage(contentsOfFile: imagePath.absoluteString) else {
-            return nil
-        }
-        return image
+            let imagePath = appUrl!.appendingPathComponent(name)
+            guard fileExists(at: imagePath.path) else {
+                return nil
+            }
+            print("after first guard")
+            guard let image = UIImage(contentsOfFile: imagePath.path) else {
+                return nil
+            }
+            return image
     }
 
     func fileExists(at path: String) -> Bool {

@@ -20,6 +20,7 @@ class ImageCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         guard let image = image else { return }
+        imgView.frame = bounds 
         imgView.image = image
     }
 }

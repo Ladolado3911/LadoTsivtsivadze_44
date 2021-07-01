@@ -12,7 +12,7 @@ class GalleryController: BaseViewController {
     @IBOutlet weak var collectView: UICollectionView!
     var pictures: [String]? {
         guard let pictures = filesManager.readPictures() else { return nil }
-        let result = pictures.filter { $0.suffix(3) == "png" }
+        let result = pictures.filter { $0.suffix(3).contains("png") }
         return result
     }
     
@@ -26,6 +26,12 @@ class GalleryController: BaseViewController {
         
         navigationItem.rightBarButtonItem = button
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //guard let pictures = pictures else { return }
+        collectView.reloadData()
     }
     
     func configCollectionView() {
@@ -43,11 +49,16 @@ class GalleryController: BaseViewController {
 
 extension GalleryController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        6
+        guard let pictures = pictures else { return 0 }
+        return pictures.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell
+        guard let pictures = pictures else { return UICollectionViewCell() }
+        let image = filesManager.loadImage(at: pictures[indexPath.row])
+        print(image)
+        cell!.image = image
         return cell!
     }
     
