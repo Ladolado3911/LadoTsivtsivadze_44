@@ -15,7 +15,7 @@ class CanvasView: UIView {
     var image: UIImage?
     private var filesManager = FilesManager()
     var color: UIColor?
-    var thickness: CGFloat?
+    //var thickness: CGFloat?
     
     var linesMock = [
         [CGPoint(x: 0, y: 0), CGPoint(x: 1, y: 1), CGPoint(x: 2, y: 2)], // პირველი ხაზი
@@ -31,55 +31,43 @@ class CanvasView: UIView {
 //        context.addLine(to: CGPoint(x: 100, y: 100))
         
         lines.forEach {
-            
             for (index, point) in $0.enumerated() {
                 if index == 0 {
                     context.move(to: point)
-                } else {
+                }
+                else {
                     context.addLine(to: point)
                 }
             }
-            
-        }
-        
-        if let color = color {
-            if let thickness = thickness {
-                context.setStrokeColor(color.cgColor)
-                context.setLineWidth(thickness)
+            if let color = color {
+                if $0 == lines.last {
+                    context.setStrokeColor(color.cgColor)
+                }
                 context.strokePath()
-
-                image = UIImage(cgImage: context.makeImage()!)
-                return
+            }
+            else {
+                context.strokePath()
             }
         }
         
-        context.setStrokeColor(UIColor.black.cgColor)
-        context.setLineWidth(2)
-        context.strokePath()
-
         image = UIImage(cgImage: context.makeImage()!)
 
-        
+        //context.setStrokeColor(UIColor.black.cgColor)
+        context.setLineWidth(2)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        
         lines.append([CGPoint]())
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        
         guard let point = touches.first?.location(in: self) else {return}
-        
         guard var lastLine = lines.popLast() else { return }
         
         lastLine.append(point)
-        
         lines.append(lastLine)
-        
-//        points.append(lastLine)
         
         setNeedsDisplay()
     }

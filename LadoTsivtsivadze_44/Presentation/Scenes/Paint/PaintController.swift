@@ -20,6 +20,16 @@ class PaintController: BaseViewController {
         return b
     }()
     
+//    var btnThickness: UIButton = {
+//       let b = UIButton()
+//        b.translatesAutoresizingMaskIntoConstraints = false
+//        b.setTitle("Set Thickness", for: .normal)
+//        b.addTarget(self, action: #selector(onPickThickness), for: .touchUpInside)
+//        b.backgroundColor = .red
+//        b.contentHorizontalAlignment = .center
+//        return b
+//    }()
+    
     var btnUndo: UIButton = {
         let b = UIButton()
         b.translatesAutoresizingMaskIntoConstraints = false
